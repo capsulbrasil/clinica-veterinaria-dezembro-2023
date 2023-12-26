@@ -1,7 +1,7 @@
 import { defineDescription } from "sonata-api";
 
 export const [Person, description] = defineDescription({
-    $id: 'Person',
+    $id: 'person',
     required: [
         'name',
         'email',
