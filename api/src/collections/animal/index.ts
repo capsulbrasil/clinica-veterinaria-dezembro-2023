@@ -1,7 +1,7 @@
 import { useFunctions } from 'sonata-api'
 import { description, Animal } from './description'
 
-export const person = () => ({
+export const animal = () => ({
   item: Animal,
   description,
   functions: {
@@ -10,6 +10,8 @@ export const person = () => ({
       'getAll',
       'insert',
       'remove',
+      'upload',
+      'removeFile',
     ]),
   }
 })

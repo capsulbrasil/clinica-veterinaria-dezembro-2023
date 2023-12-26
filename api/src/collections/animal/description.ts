@@ -22,6 +22,9 @@ export const [Animal, description] = defineDescription({
             description: 'Idade',
             type: 'number'
         },
+        pictures: {
+            $ref: 'file',
+        }
         
     }
 })
