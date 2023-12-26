@@ -27,19 +27,20 @@ export const [Person, description] = defineDescription({
             type: 'string',
             mask: '(##)#####-####'
         },
-        /* Perguntar sobre tipos de usuário */
+        
         type: {
-            description: 'Tipo',
-            type: 'boolean',
+            description: 'Usuário',
+            $ref: 'user',
         },
         ie: {
             description: 'Inscrição Estadual',
             type: 'string'
         },
-        /* Entender melhor sobre refs */
+        
         adress: {
-            description: 'Caixa Postal(CEP)',
-            type: 'string',
+            description: 'Endereço',
+            $ref: 'geolocation',
+            indexes: ['country','state','district','street','number']
             
         },
     }
