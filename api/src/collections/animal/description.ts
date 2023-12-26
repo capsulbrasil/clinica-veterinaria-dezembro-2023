@@ -12,10 +12,11 @@ export const [Animal, description] = defineDescription({
             description: 'Nome',
             type: 'string',    
         },
-        /* Fixar Ref */
+       
         owner: {
             description: 'Dono',
-            type: 'string'
+            $ref: 'person',
+            indexes: ['name']
         },
         age: {
             description: 'Idade',
