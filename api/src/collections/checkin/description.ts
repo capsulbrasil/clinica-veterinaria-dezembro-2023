@@ -13,7 +13,8 @@ export const [Checkin, description] = defineDescription({
     properties: {
         animal: {
             description: 'Animal',
-            $ref: 'animal',    
+            $ref: 'animal', 
+            indexes: ['name'],   
         },
         weight: {
             description: 'Peso',

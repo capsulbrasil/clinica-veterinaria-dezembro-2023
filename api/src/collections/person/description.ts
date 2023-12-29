@@ -31,6 +31,7 @@ export const [Person, description] = defineDescription({
         type: {
             description: 'Usuário',
             $ref: 'user',
+            inline: true,
         },
         ie: {
             description: 'Inscrição Estadual',
