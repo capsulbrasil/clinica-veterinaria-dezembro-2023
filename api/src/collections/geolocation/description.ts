@@ -39,5 +39,9 @@ export const [Geolocation, description] = defineDescription({
             description: 'Caixa Postal(CEP)',
             type: 'string',
         },
-    }
+    },
+    presets: [
+        'crud'
+    ],
+    
 })

@@ -14,6 +14,7 @@ export const [Checkin, description] = defineDescription({
         animal: {
             description: 'Animal',
             $ref: 'animal', 
+            populate: ['pictures'],
             indexes: ['name'],   
         },
         weight: {
@@ -32,5 +33,9 @@ export const [Checkin, description] = defineDescription({
             description: 'Motivo',
             type: 'string',
         },
-    }
+    },
+    presets: [
+        'crud'
+    ],
+    
 })

@@ -44,5 +44,8 @@ export const [Person, description] = defineDescription({
             indexes: ['country','state','district','street','number']
             
         },
-    }
+    },
+    presets: [
+        'crud'
+    ],
 })

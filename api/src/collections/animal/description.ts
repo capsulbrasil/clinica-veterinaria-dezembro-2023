@@ -24,7 +24,10 @@ export const [Animal, description] = defineDescription({
         },
         pictures: {
             $ref: 'file',
-        }
+        },
         
-    }
+    },
+    presets: [
+        'crud'
+    ],
 })
