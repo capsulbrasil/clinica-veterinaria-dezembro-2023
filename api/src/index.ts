@@ -9,6 +9,10 @@ router.GET('/hello-world', (_context) => {
   }
 })
 
+router.GET('/getAnimalsbyDocument',async context => {
+  
+})
+
 init(null, (context) => {
   return router.install(context)
 })

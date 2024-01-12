@@ -1,29 +1,27 @@
 <script setup lang="ts">
-import { DashboardLayout } from 'aeria-app-layout'
-import { AeriaButton } from 'waltz-ui';
-import { checkin } from '../../../api/src/collections/checkin/index';
-const metaStore = useStore('meta')
+import { AeriaButton } from "waltz-ui";
+import {  AeriaInput} from "waltz-ui";
+
+const valor = ref('');
+
+const array = ref([])
+
+async function makeRequest() 
+{
+  const response = await fetch('http://localhost:3800/getAnimalsbyDocument',{}
+
+  );
+}
 
 
 </script>
 
-<template>
-    <dashboard-layout>
-      <template #super>
-        <aeria-icon
-          v-clickable
-          :icon="
-            metaStore.$theme === 'dark'
-              ? 'moon'
-              : 'sun'
-          "
-          @click="metaStore.$theme === 'dark'
-            ? metaStore.$actions.saveTheme('default')
-            : metaStore.$actions.saveTheme('dark')
-  
-        "></aeria-icon>
-        
-      </template>
-    </dashboard-layout>
-  </template>
 
+<template>
+
+  <aeria-input v-model = "valor" >Insira o documento  </aeria-input>
+  <aeria-button @click="makeRequest" >Consulta </aeria-button>
+
+  
+
+</template>
